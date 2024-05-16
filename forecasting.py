@@ -27,3 +27,5 @@ data = pd.Series(gdp_growth_rate, index=dates)
 
 # Display the first few rows of the dataset
 print(data.head())
+
+how
