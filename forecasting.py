@@ -15,3 +15,15 @@ forecast = model_fit.forecast(steps=len(test_data))
 
 # Print the forecast
 print(forecast)
+
+import pandas as pd
+import numpy as np
+
+# Simulate GDP growth rate data
+np.random.seed(0)  # for reproducibility
+dates = pd.date_range(start='2000-01-01', periods=100, freq='Q')
+gdp_growth_rate = np.random.normal(0.02, 0.01, 100)  # mean=0.02, std=0.01
+data = pd.Series(gdp_growth_rate, index=dates)
+
+# Display the first few rows of the dataset
+print(data.head())
